@@ -157,9 +157,7 @@ App = {
         featureInstance.balances("0xa1619ab69b3ada4a55ca7036fb734b13342e6df8").then(function(c) {
           console.log(c)
         });*/
-       
-      
-    
+
         return featureInstance
     }
   };

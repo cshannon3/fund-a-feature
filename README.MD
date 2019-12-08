@@ -1,8 +1,8 @@
 So for any truffle project you first need:
     1. Start Ganache to have a test blockchain running
     2. Connect to metamask so you can interface with the blockchain in the browser
-
-To start the browser side use the cmd
+        click custom RPC for network and name it "development", url of HTTP://127.0.0.1:7545
+To start the browser side use the cmd 
     npm run dev
 
 Then in a different command prompt you want to first migrate your contracts onto the blockchain, this can be done with the cmd:
