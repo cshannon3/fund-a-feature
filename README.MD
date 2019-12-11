@@ -1,17 +1,16 @@
 # Fund-A-Feature - An Introduction to Smart Contract Development on the Ethereum Blockchain
 
 ## Quick Start<br>
-**Required Software**
-NPM
-web3.js
-MetaMask
-Truffle
-Ganache
+**Required Software** <br/>
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org)
+- [Yarn](https://yarnpkg.com)
+- [Ganache-cli](https://github.com/trufflesuite/ganache-cli)
+- web3.js
+- MetaMask
+- Truffle
 
-
-
-
-## Introduction <br>
+## Introduction <br/>
 
 
 **What is Blockchain?**
@@ -61,6 +60,30 @@ truffle init
 - migrations/: Directory for scriptable deployment files
 - test/: Directory for test files for testing your application and contracts
 - truffle-config.js: Truffle configuration file
+```
+my-app
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── tests
+├── contracts
+│   ├── Migrations.sol
+│   └── Feature.sol
+├── migrations
+│   ├── 1_initial_migration.js
+│   └── 2_deploy_contract.js
+└── src
+    ├── css
+    ├── fonts
+    ├── images
+    ├── index.html
+    └── js
+        ├── app.js
+        ├── bootstrap.min.js
+        ├── truffle-contract.js
+        └──  web3.min.js
+```
 
 3. Write the contract using [Solidity programming language](https://solidity.readthedocs.io/en/develop/) -- See below for explanation of code
 
@@ -215,8 +238,6 @@ contract Feature {
     }
 
     function fundFeature(string name, uint featnum, uint amount) {
-      //  if (feats[featid].doesExist == true && balances[msg.sender] > amount) { 
-         //voterID is the return variable
         backers[numBackers] = Backer(name, msg.sender, featnum, amount, false);
         numBackers++;
         balances[msg.sender] -= amount;
@@ -226,10 +247,7 @@ contract Feature {
         if (balances[featadr] > feats[featnum].amtneeded) {
             GoalReached(featadr);
         }
-      //  }
-           // return true;
-      //  } else {return false;}
-        
+
     }
 
     function setstarted(uint featnum) {
@@ -268,7 +286,7 @@ contract Feature {
 ## Usage
 
 
-So for any truffle project you first need:
+So for any truffle project you first need:<br/>
     1. Start Ganache to have a test blockchain running
     2. Connect to metamask so you can interface with the blockchain in the browser
         click custom RPC for network and name it "development", url of HTTP://127.0.0.1:7545
